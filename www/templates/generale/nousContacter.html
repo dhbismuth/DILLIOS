@@ -1,0 +1,29 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view  title="Nous contacter">
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content">
+        <!-- Media section (Picture, Video, Map, etc) -->
+        <div class="news-media">
+            <!-- Image 100% width -->
+            <img src="img/news-image.jpg" alt="" class="fluid-image">
+
+        </div>
+        <!-- Separator Title (for forms and mini headings) -->
+        <label class="item itemDill" style="margin-top: 50px">
+            <button  ng-disabled="myForm.$invalid" ng-click="sendFeedback();"  class="button button-light col btnDill"  style="color: #000 !important;border-color: #000 !important;">Nous contacter</button>
+        </label>
+
+
+    </ion-content>
+</ion-view>

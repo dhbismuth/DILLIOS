@@ -1,0 +1,55 @@
+<ion-view title=""  class="gem-splash_signup_background">
+
+    <!-- ======================
+   LEFT SIDE BUTTON
+   ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon-round White"></button>
+    </ion-nav-buttons>
+
+    <!-- Splash background - refer to .gem-splash_background in css/style.css to change image -->
+    <ion-content class="gem-ion-content" >
+        <div class="gem-form text-center">
+            <!-- Logo as you please -->
+            <div class="gem-splash-logo">
+                <h1 class="gem-white home-title">DILL</h1>
+                <h3 class="gem-white">Bons plans de proximité</h3>
+                <p class="gem-white">v0.1</p>
+            </div>
+            <!-- end Logo -->
+            <form novalidate="novalidate" name="myForm" >
+                <div class="list">
+                    <div class="row">
+                        <label class="item item-input col itemDill">
+                            <input type="email" ng-model="user.email" value="{{email}}" placeholder="Email" name="email1" required="required">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="white" ng-show="myForm.email1.$dirty && myForm.email1.$invalid">Adresse email invalide
+                            <span ng-show="myForm.email1.$error.required">Champ obligatoire.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="item item-input col itemDill">
+                            <input type="password" ng-model="user.password"  name="pass" value="{{password}}" placeholder="Mot de passe"   required="required">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="white" ng-show="myForm.password.$dirty && myForm.password.$invalid">
+                            <span ng-show="myForm.password.$error.required">Champ obligatoire</span>
+                        </div>
+                    </div>
+                    <label class="item itemDill">
+                        <button ng-disabled="myForm.$invalid" ng-click="valider();"  class="button button-light col btnDill" >Connexion</button>
+                    </label>
+                    <div class="text-center padding ">
+                        <div class="padding" style="  color: #fff; font-weight: bold;">Pas encore enregistré(e)?</div>
+                        <a class="button button-light col btnDill" href="#/app/signUp">Inscription gratuite</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </ion-content>
+
+</ion-view>

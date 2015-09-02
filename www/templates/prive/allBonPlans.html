@@ -1,0 +1,28 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="Dernier Bon Plans">
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content profile-edit">
+        <ion-list>
+            <a class="item item-thumbnail-left" href="#" ng-repeat="bonplan in bonPlans" ng-click="detailBonPlan('{{bonplan._id}}')">
+                <img src="img{{bonplan.img}}">
+                <h2>{{bonplan.nomLieux}}</h2>
+                <p class="position"><i class="ion-flag" style="margin-right: 5px"></i>{{bonplan.adresse}}</p>
+                <p>{{bonplan.intitulerBonPlan}}</p>
+            </a>
+
+
+
+        </ion-list>
+    </ion-content>
+</ion-view>

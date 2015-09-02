@@ -1,0 +1,51 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="{{bonPlans.nomLieux}}">
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content">
+        <!-- Media section (Picture, Video, Map, etc) -->
+        <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" style="  margin: -6px;">
+            <ion-slide>
+                <img src="img{{bonPlans.img}}" alt="" class="fluid-image">
+            </ion-slide>
+        </ion-slide-box>
+        <!-- Separator Title (for forms and mini headings) -->
+        <div class="profile-separator-title">{{bonPlans.nomLieux}}<span style="float: right"></span><span style="float: right"></span></div>
+        <div class="item item-body col">
+            <span class="col" style="float: left">Adresse : {{bonPlans.adresse}} </span>
+        </div>
+        <div class="item item-body col">
+            <span class="col" style="float: left">Valide jusqu'au : {{bonPlans.endDate | date:'dd - MM - yyyy'}} </span>
+        </div>
+        <div class="item item-body col">
+            <span class="col" style="float: left">Description du bon plan : {{bonPlans.description}} </span>
+        </div>
+        <div class="item item-body col">
+            <span class="col" style="float: left">Remise (si applicable) : {{bonPlans.porcentage }} %</span>
+        </div>        
+        <div class="item item-body">
+            <div id="mapdetail" style="width: 100%;height: 200px" data-tap-disabled="true"></div>
+        </div>
+        <!--<div class="row">
+            <div class="col">
+                <a  class="button button-light col btnDill" style="color: #000 !important;" href="tel:{{bonPlans.telephone}}"><i class="ion-ios-telephone" style="margin-right: 5px"></i> Appeller</a>
+            </div>
+            <div class="col">
+                <a  class="button button-light col btnDill" style="color: #000 !important;" href="geo:{{bonPlans.laltetude}},{{bonPlans.longitude}}"><i class="ion-map" style="margin-right: 5px"></i>Direction</a>
+            </div>
+        </div>-->
+
+
+    </ion-content>
+</ion-view>
+

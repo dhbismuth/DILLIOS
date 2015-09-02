@@ -1,0 +1,177 @@
+.center_content{
+    text-align: center;
+}
+
+
+.fullheight{
+    width: 100%;
+}
+
+.itemModif {
+    border-color: #043B68;
+    background-color: #043B68;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -5px!important;
+    padding: 0px !important;
+    border: 0px !important;
+    /* border-style: solid; */
+    font-size: 16px;
+}
+
+
+.nameCategorie{
+    width: 100%;
+    font-size: 22px !important;
+    color: #fff  !important;;
+    letter-spacing: 1px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.btnDill{
+    border-color: #ddd !important;
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.button.button-light.active, .button.button-light.activated {
+    border-color: #b2b2b2;
+    color: #000000 !important;
+    background-color: #FFFFFF !important;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+
+.itemNoBorder{
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    border-width: 0px !important;
+    border-style: solid;
+    font-size: 16px;
+
+}
+
+.input-label {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    max-width: 200px;
+    width: 35%;
+    color: #FFFFFF !important;
+    font-weight: bold !important;
+    font-size: 16px;
+}
+
+.itemDill {
+    border-bottom-color: #fff !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-bottom-width: 2px !important;
+    border-style: solid;
+    font-size: 16px;
+}
+
+
+input::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+input:focus::-webkit-input-placeholder {
+    color: red;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #FFFFFF;
+}
+input:focus:-moz-placeholder {
+    color: red;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #FFFFFF;
+}
+input:focus::-moz-placeholder {
+    color: red;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #FFFFFF;
+}
+input:focus:-ms-input-placeholder {
+    color: red;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    /* display: block; */
+    padding-top: 2px;
+    padding-left: 0;
+    height: 34px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 44px;
+    border-width: 0;
+    border-style: solid;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent !important;
+    /* border-width: 1px will actually create 2 device pixels on retina; */
+    background-size: 0;
+}
+
+.bar.bar-light {
+    border: 0;
+    border-color: #FFFFFF;
+    background-color: white;
+    background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+    color: #444;
+}
+
+.White{
+    color: #FFFFFF  !important;
+}
+
+.left-border{
+    border-top: solid  #333;
+    margin-top: 10px;
+}

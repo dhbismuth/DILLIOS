@@ -1,0 +1,75 @@
+<ion-view title=""  class="gem-splash_signup_background">
+
+    <!-- ======================
+  LEFT SIDE BUTTON
+  ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon-round White"></button>
+    </ion-nav-buttons>
+
+    <!-- Splash background - refer to .gem-splash_background in css/style.css to change image -->
+    <ion-content  class="gem-ion-content">
+        <div class="gem-form text-center">
+            <!-- Logo as you please -->
+            <div class="gem-splash-logo">
+                <h1 class="gem-white home-title">DILL</h1>
+                <h3 class="gem-white">Bons plans de proximité</h3>
+                <p class="gem-white">v0.1</p>
+            </div>
+            <!-- end Logo -->
+            <form novalidate="novalidate" name="myForm" >
+                <div class="list">
+                    <div class="row">
+                        <div class="col-50">
+                            <label class="item item-input col itemDill" style="  margin-right: 4px;">
+                                <input type="text" name="nom" value="{{fistName}}" ng-model="user.first_name" placeholder="Prénom" required="required">
+                            </label>
+                            <div class="white" ng-show="myForm.nom.$dirty && myForm.nom.$invalid">Donnée invalide
+                                <span ng-show="myForm.nom.$error.required">Champ obligatoire</span>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <label class="item item-input col itemDill">
+                                <input type="text" name="prenom" ng-model="user.last_name" value="{{lastName}}" placeholder="Nom" required="required">
+                            </label>
+                            <div class="white" ng-show="myForm.nom.$dirty && myForm.prenom.$invalid">Donnée invalide
+                                <span ng-show="myForm.prenom.$error.required">Champ obligatoire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="item item-input col itemDill">
+                            <input  type="email" ng-model="user.email" value="{{email}}" placeholder="Email" name="email1" required="required">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="white" ng-show="myForm.email1.$dirty && myForm.email1.$invalid">Invalid: <span ng-show="myForm.email1.$error.required">Email is required.</span>
+                            <span ng-show="myForm.email1.$error.email">Merci de donner une adresse email valide</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="item item-input col itemDill">
+                            <input type="password" ng-model="user.pass"  name="pass" value="{{pass}}" placeholder="Mot de passe" pattern=".{6,}"  required="required">
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="white" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">6 caractères minimum
+                            <span ng-show="myForm.pass.$error.required">Champ obligatoire</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- buttons. .button-rounded can be added for more roundness -->
+                <div class="row">
+                    <button ng-disabled="myForm.$invalid" ng-click="valider();" class="button button-light col btnDill">Je m'inscris</button>
+                </div>
+            </form>
+
+        </div>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <filter id="blur">
+                <feGaussianBlur stdDeviation="10" />
+            </filter>
+        </svg>
+    </ion-content>
+</ion-view>

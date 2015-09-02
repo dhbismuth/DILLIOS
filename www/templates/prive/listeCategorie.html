@@ -1,0 +1,25 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="Par categorie">
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content profile-edit" >
+        <ion-list>
+            <ion-item class="itemModif" ng-repeat="cat in categories" ng-click="listByCategorie('{{cat._id}}')" >
+                <p class="nameCategorie">{{cat.name}}</p>
+               <img ng-if="cat.src==0" src="img{{cat.img}}" class="fullheight">
+                <img ng-if="cat.src==1" src="{{cat.img}}" class="fullheight">
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,117 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="Mon profil">
+    <style>
+        .input-label {
+            display: table;
+            padding: 7px 10px 7px 0px;
+            max-width: 200px;
+            width: 35%;
+            color: #333 !important;
+            font-weight: bold !important;
+            font-size: 16px;
+        }
+
+
+        input::-webkit-input-placeholder {
+            color: #333 !important;
+        }
+        input:focus::-webkit-input-placeholder {
+            color: #b2b2b2 !important;
+        }
+
+        /* Firefox < 19 */
+        input:-moz-placeholder {
+            color: #333 !important;
+        }
+        input:focus:-moz-placeholder {
+            color: #b2b2b2 !important;
+        }
+
+        /* Firefox > 19 */
+        input::-moz-placeholder {
+            color: #333 !important;
+        }
+        input:focus::-moz-placeholder {
+            color: #b2b2b2 !important;
+        }
+
+        input:-ms-input-placeholder {
+            color: #333 !important;
+        }
+        input:focus:-ms-input-placeholder {
+            color: #b2b2b2 !important;
+        }
+    </style>
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <!-- ======================
+    RIGHT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-checkmark-circled"  ng-click="updateInfoPrestation();"></button>
+    </ion-nav-buttons>
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content profile-edit">
+        <!-- ======================
+         PROFILE ADD PICTURE BANNER
+        ====================== -->
+        <div class="gem-profile-media">
+            <div class="gem-profile-details">
+                <img width="100" height="100" alt="" class="gem-circle profile-image" ng-src="{{picture}}" ng-click="takePicture();" >
+                <h3 class="gem-white">{{user.first_name}} {{user.last_name}}</h3>
+                <!-- End Ionic row -->
+            </div>
+
+            <!-- background image -->
+            <img src="img/backgroundSignup.jpg" alt="" class="fluid-image profile-background-image">
+        </div>
+        <!-- ======================
+        END  PROFILE ADD PICTURE BANNER
+        ====================== -->
+
+        <!-- Standard Ionic List -->
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Prénom</span>
+                <input style="color:#000 !important" value="{{user.first_name}}"  ng-model="user.first_name" type="text" placeholder="Prénom">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Nom</span>
+                <input style="color:#000 !important" value="{{user.last_name}}" ng-model="user.last_name" type="text" placeholder="Nom">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Age</span>
+                <input style="color:#000 !important" value="{{user.age}}" ng-model="user.age" type="number" placeholder="Age">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Profession</span>
+                <input style="color:#000 !important" value="{{user.profession}}" ng-model="user.profession" type="text" placeholder="Profession">
+            </label>
+        </div>
+
+        <!-- Separator Title (for forms and mini headings) -->
+        <div class="profile-separator-title"><i class="ion-gear-a"></i> Paramétres du compte</div>
+
+        <!-- Standard Ionic List -->
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <input style="color:#000 !important" readonly type="text" value="{{user.email}}" ng-model="user.email"  placeholder="email.com">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Mot de passe</span>
+                <input style="color:#000 !important" ng-model="user.pass" type="password" value="">
+            </label>
+        </div>
+
+    </ion-content>
+</ion-view>

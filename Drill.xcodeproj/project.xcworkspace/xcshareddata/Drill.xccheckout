@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B12DABE-4759-4669-8248-DC952CC5EC48</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Drill</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A9534502368C261DE843DB90BE61698CCC7A9113</key>
+		<string>https://bitbucket.org/sammouda/dill-ios.git</string>
+		<key>C2F37E5FE524008E984165635BC81B3E4CE5DF6A</key>
+		<string>https://bitbucket.org/sammouda/dill.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Drill.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A9534502368C261DE843DB90BE61698CCC7A9113</key>
+		<string>../..</string>
+		<key>C2F37E5FE524008E984165635BC81B3E4CE5DF6A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/sammouda/dill-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A9534502368C261DE843DB90BE61698CCC7A9113</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C2F37E5FE524008E984165635BC81B3E4CE5DF6A</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A9534502368C261DE843DB90BE61698CCC7A9113</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

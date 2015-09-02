@@ -1,0 +1,182 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-light">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" >
+        <ion-header-bar class="bar-light">
+            <h1 class="title">DILL</h1>
+        </ion-header-bar>
+        <ion-content class="dark">
+            <ion-list class="dark">
+                <ion-item nav-clear menu-close href="#/app/login">
+                    <span class="txt_menu"><i class="ion-log-in" style="margin-right: 10px"></i>Se connecter</span>
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/signUp">
+                    <span class="txt_menu"><i class="ion-ios-download" style="margin-right: 10px"></i>Inscription</span>
+                </ion-item>
+                
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+
+
+<script id="entrer.html" type="text/ng-template">
+    <ion-modal-view style="  background: transparent;">
+    <div style="width: 90%; min-height: 200px; background: #fff; margin-top: 50%; opacity: 3; position: absolute; z-index: 999;left: 0; right: 0;margin-left: auto;margin-right: auto;">
+    <ion-modal-view>
+    <ion-content>
+    <div class="row">
+    <div class="col">
+    <i class="ion-close-round active" style="float: right" ng-click="fermerEntrer();"></i>
+    </div>
+    </div>
+    <div class="row" style="height: 120px;">
+    <div class="col-50">
+    <img class="col" src="file:///android_asset/www/img/news-image.jpg" width="">
+    </div>
+    <div class="col-50">
+    <p> Bienvenue dans l'agence de Société Génerale de Neuilly sur Seine</p>
+    </div>
+    </div>
+    <div class="row" style=" height: 50px;background: #000;padding-top: 15px;">
+    <i class="ion-chevron-right" style="float: right;color: #fff;margin-left: 20px;"></i>
+    <i class="ion-chevron-right" style="float: right;color: #fff;"></i>
+    <p style="color: #fff;font-size: 19px;font-weight: bold;margin-left: 20px;">MON ESPACE AGENCE</p>
+    </div>
+    </ion-content>
+    </ion-modal-view>
+    </div>
+    <div style=" background: #9e484c;opacity: 0.6; width: 100%; height: 100%; position: absolute;z-index: 3;">
+    
+    </div>
+    </ion-modal-view>
+    </script>
+
+<script id="sortie.html" type="text/ng-template">
+    <ion-modal-view style="  background: transparent;">
+    <div style="width: 90%; min-height: 490px; background: #fff; margin-top: 5%; opacity: 3; position: absolute; z-index: 999;left: 0; right: 0;margin-left: auto;margin-right: auto;">
+    <ion-modal-view>
+    <ion-content>
+    <div class="row">
+    <div class="col">
+    <i class="ion-close-round active" style="float: right" ng-click="fermerSortie();"></i>
+    </div>
+    </div>
+    <div class="row" style="height: 140px;">
+    <div class="col-50" ng-if="idAgent!=''">
+    <img  src="{{pictureAgent}}" width="100px">
+    </div>
+    <div class="col-50" ng-if="idAgent!=''">
+    <p> Ce fut un plaisir de vous rencontrer {{nameClient}}.<br>J'espère que notre RDV a satisfait a vos attentes</p>
+    </div>
+    <div class="col" ng-if="idAgent==''">
+    <p> La Société Générale vous remercie de la confiance que vous nous accordez</p>
+    </div>
+    </div>
+    <div class="row" style=" height: 50px;background: #000;padding-top: 15px;">
+    <i class="ion-chevron-right" style="float: right;color: #fff;margin-left: 20px;"></i>
+    <i class="ion-chevron-right" style="float: right;color: #fff;"></i>
+    <p style="color: #fff;font-size: 19px;font-weight: bold;margin-left: 20px;">Votre avis nous intéresse </p>
+    </div>
+    <div class="row" style="margin-top: 15px">
+    <div class="col-75">
+    Etes-vous satisfait(e) de votre visite ?
+    </div>
+    <div class="col-25">
+    <div class="row">
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/yes.png">
+    </div>
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/no.png">
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row" style="margin-top: 15px">
+    <div class="col-75">
+    Avez-vous apprécié votre accueil personnalisé en agence ?
+    </div>
+    <div class="col-25">
+    <div class="row">
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/yes.png">
+    </div>
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/no.png">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="row" style="margin-top: 15px">
+    <div class="col-75">
+    Avez-vous satfisfait le motif de votre visite ?
+    </div>
+    <div class="col-25">
+    <div class="row">
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/yes.png">
+    </div>
+    <div class="col-50">
+    <img width="25" src="file:///android_asset/www/img/no.png">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="row" style="margin-top: 15px">
+    <div class="col center_content">
+    <button ng-click="envoyer()"  class="col button button-balanced " >
+    Envoyer
+    </button>
+    </div>
+    </div>
+    </ion-content>
+    </ion-modal-view>
+    </div>
+    <div style=" background: #9e484c;opacity: 0.6; width: 100%; height: 100%; position: absolute;z-index: 3;">
+    
+    </div>
+    </ion-modal-view>
+    </script>
+
+
+<script id="enCaharge.html" type="text/ng-template">
+    <ion-modal-view style="  background: transparent;">
+    <div style="width: 90%; min-height: 180px; background: #fff; margin-top: 50%; opacity: 3; position: absolute; z-index: 999;left: 0; right: 0;margin-left: auto;margin-right: auto;">
+    <ion-modal-view>
+    <ion-content>
+    <div class="row">
+    <div class="col">
+    <i class="ion-close-round active" style="float: right" ng-click="fermerCharge();"></i>
+    </div>
+    </div>
+    <div class="row" style="height: 100px;">
+    <div class="col-50">
+    <img  src="{{picture}}" width="100px">
+    </div>
+    <div class="col-50">
+    <p> Notre agent {{nameAgent}} va venir vous prendre en charge</p>
+    </div>
+    </div>
+    </ion-content>
+    </ion-modal-view>
+    </div>
+    <div style=" background: #9e484c;opacity: 0.6; width: 100%; height: 100%; position: absolute;z-index: 3;">
+    
+    </div>
+    </ion-modal-view>
+    </script>

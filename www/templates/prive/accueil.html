@@ -1,0 +1,69 @@
+<!-- Title for header bar (refer to www/index.html) -->
+<ion-view title="ACCUEIL">
+    <!-- ======================
+    LEFT SIDE BUTTON
+    ====================== -->
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+
+
+    <!-- ======================
+    MAIN CONTENT SECTION
+    ====================== -->
+    <ion-content class="has-header gem-ion-content">
+        <!-- Media section (Picture, Video, Map, etc) -->
+        <ion-slide-box  on-slide-changed="onSlideChanged($index)" style="  margin: -6px;">
+            <ion-slide ng-repeat="bonplan in bonPlans">
+                <img ng-src="img{{bonplan.img}}" alt="" class="fluid-image" ng-click="detailBonPlan('{{bonplan._id}}')">
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="title-line row" style="margin-top: 20px;">
+                <span class="left-border col-33"><i></i></span>
+                <p class="title-line col-33 center_content"><strong style="font-size: 17px">BIENVENUE</strong></p>
+                <span class="left-border col-33"><i></i></span>
+        </div>
+
+        <div class="row" style="margin-top: 10px;">
+            <p> Aujourd’hui {{nbBonplan}} bons plans à proximité et des offres toujours plus intéressantes</p>
+        </div>
+
+        <div class="title-line row" style="margin-top: 20px;">
+            <span class="left-border col-25"><i></i></span>
+            <p class="title-line col-50 center_content"><strong style="font-size: 17px">DERNIERS BONS PLANS</strong></p>
+            <span class="left-border col-25"><i></i></span>
+        </div>
+        <div class="row " style="margin-top: 10px;">
+            <ion-list class="col">
+                <a class="item item-thumbnail-left" href="#" ng-repeat="bonplan in bonPlans" ng-click="detailBonPlan('{{bonplan._id}}')">
+                    <img src="img{{bonplan.img}}">
+                    <h2>{{bonplan.nomLieux}}</h2>
+                    <p class="position"><i class="ion-flag" style="margin-right: 5px"></i>{{bonplan.adresse}}</p>
+                    <p>{{bonplan.intitulerBonPlan}}</p>
+                </a>
+            </ion-list>
+        </div>
+
+
+        <div class="title-line row" style="margin-top: 20px;">
+            <span class="left-border col-33"><i></i></span>
+            <p class="title-line col-33 center_content"><strong style="font-size: 18px">ACTUS SG</strong></p>
+            <span class="left-border col-33"><i></i></span>
+        </div>
+        <div class="row " style="margin-top: 10px;">
+            <div class="list">
+                <div ng-repeat="entry in entries" class="item" ng-click="browse(entry.link);">
+                    <b>{{entry.title}}</b><br>
+                    <span ng-bind-html="entry.contentSnippet"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </ion-content>
+</ion-view>
+
